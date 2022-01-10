@@ -1,5 +1,5 @@
 from config import *
-from modelo import Carro
+from modelo import Baia, Carro, Endereco, Funcionario, Local, Modelo, Peca, Servico
 from modelo import Plano
 from modelo import Cliente
 from flask import jsonify
@@ -21,13 +21,93 @@ def listarCarrosJson():
     resposta.headers.add("Access-Control-Allow-Origin", "*")
     return resposta
 
+@app.route("/listarClientesJson")
+def listarClientesJson():
+    BD = db.session.query(Cliente).all()
+    json = []
+    for x in BD:
+        json.append(x.json())
+    resposta = jsonify(json)
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta
+
+@app.route("/listarModelosJson")
+def listarModelosJson():
+    BD = db.session.query(Modelo).all()
+    json = []
+    for x in BD:
+        json.append(x.json())
+    resposta = jsonify(json)
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta
+
+@app.route("/listarEnderecosJson")
+def listarEnderecosJson():
+    BD = db.session.query(Endereco).all()
+    json = []
+    for x in BD:
+        json.append(x.json())
+    resposta = jsonify(json)
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta
+
 @app.route("/listarPlanosJson")
 def listarPlanosJson():
-    planosBD = db.session.query(Plano).all()
-    planosJson = []
-    for x in planosBD:
-        planosJson.append(x.json())
-    resposta = jsonify(planosJson)
+    BD = db.session.query(Plano).all()
+    json = []
+    for x in BD:
+        json.append(x.json())
+    resposta = jsonify(json)
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta
+
+@app.route("/listarPecasJson")
+def listarPecasJson():
+    BD = db.session.query(Peca).all()
+    json = []
+    for x in BD:
+        json.append(x.json())
+    resposta = jsonify(json)
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta
+
+@app.route("/listarBaiasJson")
+def listarBaiasJson():
+    BD = db.session.query(Baia).all()
+    json = []
+    for x in BD:
+        json.append(x.json())
+    resposta = jsonify(json)
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta
+
+@app.route("/listarLocaisJson")
+def listarLocaisJson():
+    BD = db.session.query(Local).all()
+    json = []
+    for x in BD:
+        json.append(x.json())
+    resposta = jsonify(json)
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta
+
+@app.route("/listarFuncionariosJson")
+def listarFuncionariosJson():
+    BD = db.session.query(Funcionario).all()
+    json = []
+    for x in BD:
+        json.append(x.json())
+    resposta = jsonify(json)
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta
+
+@app.route("/listarServicosJson")
+def listarServicosJson():
+    BD = db.session.query(Servico).all()
+    json = []
+    for x in BD:
+        json.append(x.json())
+    resposta = jsonify(json)
     resposta.headers.add("Access-Control-Allow-Origin", "*")
     return resposta
 

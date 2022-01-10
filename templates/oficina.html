@@ -47,10 +47,10 @@
             </div>
             <div class="modal-body" id="formIncluirCarro">
                 <form class="form">
-                    <label>Marca</label>
-                    <input type="text" class="form-control" id="txtMarca"/>
+                    <label>Cliente</label>
+                    <select id="selectCliente" class="form-control" > <!-- preenche via javascript --></select>
                     <label>Modelo</label>
-                    <input type="text" class="form-control" id="txtModelo"/>
+                    <select id="selectModelo" class="form-control"> <!-- preenche via javascript --></select>
                     <label>Ano</label>
                     <input type="text" class="form-control" id="txtAno"/>
                     <label>Placa</label>
@@ -79,6 +79,7 @@
                 <form class="form">
                     <label>Nome do plano</label>
                     <input type="text" class="form-control" id="txtNomePlano"/>
+                   <select id="selectPlanos"> <!-- preenche via javascript --></select>
                 </form>
             </div>
 
@@ -100,6 +101,7 @@
                     <th scope="col">Modelo</th>
                     <th scope="col">Ano</th>
                     <th scope="col">Placa</th>
+                    <th scope="col">Cliente</th>
                 </tr>
             </thead>
             <tbody id="corpoTblCarros">
