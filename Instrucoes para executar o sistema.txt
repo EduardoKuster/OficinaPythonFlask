@@ -1,0 +1,17 @@
+Executar o model.py para criar o banco de dados( também irá preencheer e testa-lo com valores de exemplo)
+Executar o backend.py, que subirá o sistema localmente na porta 5000. 
+Acessar o sistema pelo endereço http://localhost:5000/, onde a listagem de carros está na barra de menu superior.
+A opção "listar carros" irá trazer uma listagem dos carros cadastrados.
+a opção "novo carro" abrirá um formulário para inserção de valores de um novo carro.
+após insercão de um novo carro, ele deverá aparecer na listagem.
+além da tela de cadastro de listagem e inclusão da classe composta, existem os caminhos de listagem das demais classes:
+http://localhost:5000/listarCarrosJson
+http://localhost:5000/listarModelosJson
+http://localhost:5000/listarClientesJson
+http://localhost:5000/listarEnderecosJson
+http://localhost:5000/listarPlanosJson
+http://localhost:5000/listarPecasJson
+http://localhost:5000/listarFuncionariosJson
+http://localhost:5000/listarServicosJson
+http://localhost:5000/listarLocaisJson
+http://localhost:5000/listarBaiasJson
